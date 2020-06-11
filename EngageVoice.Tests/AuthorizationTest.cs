@@ -21,10 +21,13 @@ namespace EngageVoice.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_EXTENSION"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
             );
+            
             var engageVoice = new EngageVoice();
             var engageVoiceToken = await engageVoice.Authorize(rc.token.access_token);
             Assert.NotNull(engageVoiceToken);
             Assert.NotNull(engageVoiceToken.accessToken);
+
+            await rc.Revoke();
         }
     }
 }

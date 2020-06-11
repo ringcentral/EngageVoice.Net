@@ -19,4 +19,10 @@
       <ProjectReference Include="..\EngageVoice.Net\EngageVoice.Net.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update=".env">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
