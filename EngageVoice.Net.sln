@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngageVoice.Net", "EngageVoice.Net\EngageVoice.Net.csproj", "{AA5120A3-214E-4AA0-9F2D-2B68F8FCFE6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA5120A3-214E-4AA0-9F2D-2B68F8FCFE6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5120A3-214E-4AA0-9F2D-2B68F8FCFE6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5120A3-214E-4AA0-9F2D-2B68F8FCFE6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5120A3-214E-4AA0-9F2D-2B68F8FCFE6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
