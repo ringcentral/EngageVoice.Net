@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using RingCentral;
+using dotenv.net;
 
 namespace EngageVoice.Tests
 {
@@ -9,6 +10,7 @@ namespace EngageVoice.Tests
         [Fact]
         public async void TestAuthorize()
         {
+            DotEnv.Config(true);
             var rc = new RestClient(
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_ID"),
                 Environment.GetEnvironmentVariable("RINGCENTRAL_CLIENT_SECRET"),
