@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -48,6 +49,8 @@ namespace EngageVoice
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
             CancellationToken? cancellationToken = null)
         {
+            httpRequestMessage.Headers.Add("X-User-Agent", $"EngageVoice.Net/0.1.0");
+            httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", this.token.accessToken);
             HttpResponseMessage httpResponseMessage;
             if (cancellationToken == null)
             {
