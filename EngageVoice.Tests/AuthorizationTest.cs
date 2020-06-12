@@ -22,7 +22,7 @@ namespace EngageVoice.Tests
                 Environment.GetEnvironmentVariable("RINGCENTRAL_PASSWORD")
             );
             
-            var engageVoice = new EngageVoice();
+            var engageVoice = new EngageVoice(Environment.GetEnvironmentVariable("ENGAGE_VOICE_SERVER_URL"));
             var engageVoiceToken = await engageVoice.Authorize(rc.token.access_token);
             Assert.NotNull(engageVoiceToken);
             Assert.NotNull(engageVoiceToken.accessToken);
