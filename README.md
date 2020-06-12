@@ -42,3 +42,4 @@ dotnet pack
 
 - Add models:
     - Swagger spec: https://github.com/ringcentral/engage-voice-api-docs/blob/master/specs/engage-voice_openapi3.json
+- method to Refresh & Revoke EV Token
