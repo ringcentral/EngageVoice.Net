@@ -49,7 +49,7 @@ namespace EngageVoice
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
             CancellationToken? cancellationToken = null)
         {
-            httpRequestMessage.Headers.Add("X-User-Agent", $"EngageVoice.Net/0.1.2");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"EngageVoice.Net/0.1.3");
             httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", this.token.accessToken);
             HttpResponseMessage httpResponseMessage;
             if (cancellationToken == null)
