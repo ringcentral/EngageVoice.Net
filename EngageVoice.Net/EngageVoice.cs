@@ -49,7 +49,7 @@ namespace EngageVoice
         public async Task<HttpResponseMessage> Request(HttpRequestMessage httpRequestMessage,
             CancellationToken? cancellationToken = null)
         {
-            httpRequestMessage.Headers.Add("X-User-Agent", $"EngageVoice.Net/0.1.0");
+            httpRequestMessage.Headers.Add("X-User-Agent", $"EngageVoice.Net/0.1.1");
             httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", this.token.accessToken);
             HttpResponseMessage httpResponseMessage;
             if (cancellationToken == null)
@@ -106,12 +106,12 @@ namespace EngageVoice
                     if (t.value.GetType().IsArray)
                     {
                         return string.Join("&",
-                            (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeUriString(o.ToString())}")
+                            (t.value as object[]).Select(o => $"{t.name}={Uri.EscapeDataString(o.ToString())}")
                             .ToArray());
                     }
                     else
                     {
-                        return $"{t.name}={Uri.EscapeUriString(t.value.ToString())}";
+                        return $"{t.name}={Uri.EscapeDataString(t.value.ToString())}";
                     }
                 });
                 uriBuilder.Query = string.Join("&", fields);
